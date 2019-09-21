@@ -9,8 +9,7 @@ function lightUp() {
 
     setInterval(function () {
         document.body.style.background = 'green';
-    }, 300)
-
+    }, 400)
     
     setInterval(function () {
         document.body.style.background = 'red';
@@ -19,5 +18,5 @@ function lightUp() {
     
     setInterval(function () {
         document.body.style.background = 'orange';
-    }, 800)
+    }, 600)
 }
