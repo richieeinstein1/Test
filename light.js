@@ -1,4 +1,3 @@
-import vibrator from "./vibrate.js";
 function lightUp() {
     document.body.style.background = 'yellow';
     vibrator()
