@@ -1,6 +1,6 @@
 function lightUp() {
     document.body.style.background = 'yellow';
-    vibrator()
+ 
     setInterval(function () {
         document.body.style.background = 'blue';
          
