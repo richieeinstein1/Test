@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-<h1>Welcome wanna test your phone's vibration </h1>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome wanna test your phone's vibration</h1>
+    <h1>
+      This is your screen Resolution :
+      <script>
+        document.write(screen.width + "x" + screen.height);
+      </script>
+      pixels
+    </h1>
 
-<button onclick="vibrator()">Test vibration</button>
-<button onclick="lightUp()">Disco</button>
+    <button onclick="vibrator()">Test vibration</button>
+    <button onclick="lightUp()">Disco</button>
 
+    <script src="./vibrate.js"></script>
+    <script src="./light.js"></script>
 
-<script src="./vibrate.js" ></script>
-<script src="./light.js"></script>
-
-
-
-<small>===Made with love by richie===</small>
-</body>
+    <small>===Made with love by richie===</small>
+  </body>
 </html>
