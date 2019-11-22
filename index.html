@@ -13,13 +13,31 @@
       </script>
       pixels
     </h1>
+    <h1>
+      Your Device Information:
+      <script>
+        document.write("Platform: " + window.navigator.platform + "</br>");
+        document.write(
+          "RAM Size(Memory): " + window.navigator.deviceMemory + "Gb" + "</br>"
+        );
+        document.write(
+          "TouchPoint :" + window.navigator.maxTouchPoints + "</br>"
+        );
+        document.write(
+          "Network Type: " + window.navigator.connection.effectiveType + "</br>"
+        );
+      </script>
+    </h1>
+    <button id="find-me">Show my location</button><br />
+    <p id="status"></p>
+    <a id="map-link" target="_blank"></a>
 
     <button onclick="vibrator()">Test vibration</button>
     <button onclick="lightUp()">Disco</button>
 
     <script src="./vibrate.js"></script>
     <script src="./light.js"></script>
-
+    <script src="./location.js"></script>
     <small>===Made with love by richie===</small>
   </body>
 </html>
