@@ -19,6 +19,29 @@
         document.write("Platform: " + window.navigator.platform + "</br>");
       </script>
     </h1>
+    <h1>Check battery</h1>
+    <button onclick="batteryChecker()">Check battery</button>
+
+    <script>
+      function batteryChecker() {
+        let batteryIsCharging = false;
+
+        navigator.getBattery().then(function(battery) {
+          batteryIsCharging = battery.charging;
+
+          document.write(
+            "Battery Status(Charging): " + batteryIsCharging + "</br>"
+          ) +
+            battery.addEventListener("chargingchange", function() {
+              batteryIsCharging = battery.charging;
+
+              document.write(
+                "Battery Status(Charging): " + batteryIsCharging + "</br>"
+              );
+            });
+        });
+      }
+    </script>
     <button id="find-me">Show my location</button><br />
     <p id="status"></p>
     <a id="map-link" target="_blank"></a>
