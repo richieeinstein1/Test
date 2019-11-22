@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Welcome wanna test your phone's vibration</h1>
-    <h1>
-      This is your screen Resolution :
-      <script>
-        document.write(screen.width + "x" + screen.height);
-      </script>
-      pixels
-    </h1>
-    <h1>
-      Your Device Information:
-      <script>
-        document.write("Platform: " + window.navigator.platform + "</br>");
-      </script>
-    </h1>
 
-    <h1>
-      Check battery :
-      <button onclick="batteryChecker()">Check battery</button>
-    </h1>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
+<body>
+  <h1>Welcome wanna test your phone's vibration</h1>
+  <h1>
+    This is your screen Resolution :
     <script>
-      function batteryChecker() {
-        let batteryIsCharging = false;
-
-        navigator.getBattery().then(function(battery) {
-          batteryIsCharging = battery.charging;
-
-          document.write(
-            "Battery Status(Charging): " + batteryIsCharging + "</br>"
-          ) +
-            battery.addEventListener("chargingchange", function() {
-              batteryIsCharging = battery.charging;
-
-              document.write(
-                "Battery Status(Charging): " + batteryIsCharging + "</br>"
-              );
-            });
-        });
-      }
+      document.write(screen.width + "x" + screen.height);
     </script>
-    <button id="find-me">Show my location</button><br />
-    <p id="status"></p>
-    <a id="map-link" target="_blank"></a>
+    pixels
+  </h1>
+  <h1>
+    Your Device Information:
+    <script>
+      document.write("Platform: " + window.navigator.platform + "</br>");
+    </script>
+  </h1>
 
-    <button onclick="vibrator()">Test vibration</button>
-    <button onclick="lightUp()">Disco</button>
+  <h1>
+    Check battery : <button onclick="batteryChecker()">Check battery</button>
+  </h1>
 
-    <script src="./vibrate.js"></script>
-    <script src="./light.js"></script>
-    <script src="./location.js"></script>
-    <small>===Made with love by richie===</small>
-  </body>
+  <script>
+    function batteryChecker() {
+      let batteryIsCharging = false;
+
+      navigator.getBattery().then(function (battery) {
+        batteryIsCharging = battery.charging;
+
+        document.write(
+          "Battery Status(Charging): " + batteryIsCharging + "</br>"
+        ) +
+          battery.addEventListener("chargingchange", function () {
+            batteryIsCharging = battery.charging;
+
+            document.write(
+              "Battery Status(Charging): " + batteryIsCharging + "</br>"
+            );
+          });
+      });
+    }
+  </script>
+  <button id="find-me">Show my location</button><br />
+  <p id="status"></p>
+  <a id="map-link" target="_blank"></a>
+
+  <button onclick="vibrator()">Test vibration</button>
+  <button onclick="lightUp()">Disco</button>
+
+  <script src="./vibrate.js"></script>
+  <script src="./light.js"></script>
+  <script src="./location.js"></script>
+  <small>===Made with love by richie===</small>
+</body>
+
 </html>
