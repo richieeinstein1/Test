@@ -22,7 +22,7 @@
     </h1>
 
     <h1>
-      Check battery : <button onclick="batteryChecker()">Check battery</button>
+      Check battery : <button id="battery" >Check battery</button>
     </h1>
 
     <script>
@@ -65,6 +65,7 @@
             });
         });
       }
+      document.getElementById("battery").addEventListener("click", batteryChecker())
     </script>
     <button id="find-me">Show my location</button><br />
     <p id="status"></p>
